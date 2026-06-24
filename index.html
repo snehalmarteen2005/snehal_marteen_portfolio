@@ -735,6 +735,175 @@
         }
 
         /*────────────────────────────────────────
+  EXPERIENCE
+────────────────────────────────────────*/
+        #experience {
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(135deg, #0a1628, #0d0d2b, #1a0a2e);
+            padding: 7rem 4rem;
+        }
+
+        .exp-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .exp-inner h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: clamp(2.8rem, 5vw, 5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--grad-1), var(--grad-2), var(--grad-3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 300% 300%;
+            animation: textGradient 6s ease infinite;
+            line-height: 0.9;
+            letter-spacing: -0.02em;
+            margin-bottom: 3.5rem;
+        }
+
+        .exp-card {
+            background: rgba(13,13,43,0.6);
+            border: 1px solid rgba(0,212,255,0.1);
+            border-radius: 16px;
+            padding: 3rem 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all .4s cubic-bezier(0.23,1,0.32,1);
+        }
+
+        .exp-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--grad-1), var(--grad-2), var(--grad-3));
+            border-radius: 4px 0 0 4px;
+        }
+
+        .exp-card:hover {
+            background: rgba(0,212,255,0.04);
+            border-color: rgba(0,212,255,0.2);
+            box-shadow: 0 0 30px rgba(0,212,255,0.08);
+            transform: translateY(-4px);
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .exp-role {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.1;
+        }
+
+        .exp-company {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-top: 0.3rem;
+        }
+
+        .exp-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(0,212,255,0.1);
+            border: 1px solid rgba(0,212,255,0.2);
+            border-radius: 100px;
+            padding: 0.4rem 1rem;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .exp-duration {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--mid);
+            letter-spacing: 0.1em;
+            margin-bottom: 1.2rem;
+        }
+
+        .exp-desc {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .exp-desc strong {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .exp-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .exp-highlight {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 100px;
+            padding: 0.3rem 0.8rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 0.04em;
+            transition: all .3s;
+        }
+
+        .exp-card:hover .exp-highlight {
+            color: #fff;
+            border-color: rgba(0,212,255,0.2);
+        }
+
+        .exp-govt-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: rgba(139,92,246,0.1);
+            border: 1px solid rgba(139,92,246,0.2);
+            border-radius: 100px;
+            padding: 0.35rem 0.9rem;
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: var(--accent2);
+            letter-spacing: 0.06em;
+            margin-top: 0.3rem;
+        }
+
+        @media(max-width:900px) {
+            #experience {
+                padding: 4rem 1.5rem;
+            }
+            .exp-card {
+                padding: 2rem 1.5rem;
+            }
+            .exp-header {
+                flex-direction: column;
+            }
+        }
+
+        /*────────────────────────────────────────
   PROJECTS
 ────────────────────────────────────────*/
         #projects {
@@ -1514,6 +1683,7 @@
         <a href="#hero" class="nav-home">⌂</a>
         <a href="#skills" class="nav-link" data-sec="skills">Skills</a>
         <a href="#about" class="nav-link" data-sec="about">About</a>
+        <a href="#experience" class="nav-link" data-sec="experience">Experience</a>
         <a href="#projects" class="nav-link" data-sec="projects">Projects</a>
         <a href="#achievements" class="nav-link" data-sec="achievements">Wins</a>
         <a href="#contact" class="nav-cta">Contact me</a>
@@ -1719,8 +1889,57 @@
     </section>
     </div>
 
-    <!-- ══════════ PAGE 3: PROJECTS ══════════ -->
+    <!-- ══════════ PAGE 3: EXPERIENCE ══════════ -->
     <div class="page" data-page="3">
+    <section id="experience">
+        <div class="exp-inner">
+            <span class="section-tag rev">/ Professional Experience</span>
+            <h2 class="rev">Work<br>Experience</h2>
+
+            <div class="exp-card rev-scale">
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-role">AI/ML Intern</div>
+                        <div class="exp-company">Vatisn Systems Pvt. Limited</div>
+                        <div class="exp-govt-tag">🏛 Associated with Telangana Government</div>
+                    </div>
+                    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.4rem;">
+                        <span class="exp-badge">🏢 On-Site · Offline</span>
+                        <span class="exp-badge">📅 3 Months</span>
+                    </div>
+                </div>
+
+                <div class="exp-duration">AI/ML Internship · Telangana, India</div>
+
+                <p class="exp-desc">
+                    Completed an intensive <strong>3-month offline internship</strong> focused on 
+                    <strong>Artificial Intelligence & Machine Learning</strong> at Vatisn Systems, 
+                    a company associated with the <strong>Telangana State Government</strong>. 
+                    Worked hands-on with cutting-edge technologies including 
+                    <strong>Sovereign AI</strong> and <strong>RedPandas</strong>, gaining deep 
+                    practical knowledge in AI/ML engineering, data processing pipelines, 
+                    and real-world AI system deployment. This experience significantly 
+                    accelerated my understanding of applied machine learning beyond 
+                    academic foundations.
+                </p>
+
+                <div class="exp-highlights">
+                    <span class="exp-highlight">Sovereign AI</span>
+                    <span class="exp-highlight">RedPandas</span>
+                    <span class="exp-highlight">Machine Learning</span>
+                    <span class="exp-highlight">Deep Learning</span>
+                    <span class="exp-highlight">Data Pipelines</span>
+                    <span class="exp-highlight">AI Deployment</span>
+                    <span class="exp-highlight">Python</span>
+                    <span class="exp-highlight">Model Training</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!-- ══════════ PAGE 4: PROJECTS ══════════ -->
+    <div class="page" data-page="4">
     <div style="position:relative;z-index:1;background:var(--bg);">
         <section id="projects">
             <span class="section-tag rev">/ Portfolio Projects</span>
@@ -1747,14 +1966,16 @@
                 <div class="proj-row">
                     <div class="pn">02</div>
                     <div class="proj-body">
-                        <div class="pt">Autism Support System</div>
-                        <div class="pr">Healthcare AI · Accessibility</div>
-                        <div class="pd">End-to-end AI assistive application covering data processing, model training,
-                            and a usable interface for children with autism. Classification on behavioral data with
-                            accessible, inclusive design focus.</div>
+                        <div class="pt">Bank Statement Analysis</div>
+                        <div class="pr">FinTech AI · Fraud Detection</div>
+                        <div class="pd">Full-stack financial document intelligence platform that converts all types of bank
+                            statements into structured JSON format and performs automated fraud detection. Processes diverse
+                            statement formats with intelligent parsing, data extraction, and anomaly detection algorithms
+                            to identify suspicious transactions and patterns.</div>
                         <div class="p-tags">
-                            <span class="p-tag">Python</span><span class="p-tag">Scikit-learn</span><span
-                                class="p-tag">Healthcare AI</span><span class="p-tag">Accessibility</span>
+                            <span class="p-tag">Next.js</span><span class="p-tag">FastAPI</span><span
+                                class="p-tag">Python</span><span class="p-tag">Fraud Detection</span><span
+                                class="p-tag">JSON Parsing</span>
                         </div>
                     </div>
                     <div class="p-arr">→</div>
@@ -1762,15 +1983,19 @@
                 <div class="proj-row">
                     <div class="pn">03</div>
                     <div class="proj-body">
-                        <div class="pt">Drug Interaction Predictor</div>
-                        <div class="pr">Predictive ML · Healthcare Decision Support</div>
-                        <div class="pd">Scalable ML pipeline analyzing 1000+ drug combinations to predict high-risk
-                            interactions. Full SDLC — data preprocessing, feature engineering, model evaluation, and
-                            validation.</div>
+                        <div class="pt">AI-Powered Employee Tracking & Attendance</div>
+                        <div class="pr">Computer Vision · Full-Stack AI Engineering</div>
+                        <div class="pd">Comprehensive automated attendance platform that replaces manual time-clocking
+                            with intelligent video analysis. Processes security camera footage using YOLOv8 for human
+                            detection, DeepSort for multi-object tracking, and facial recognition with pgvector for
+                            high-speed similarity searches. Features asynchronous video processing via Celery & Redis,
+                            and a responsive admin dashboard with interactive analytics.</div>
                         <div class="p-tags">
-                            <span class="p-tag">Python</span><span class="p-tag">ML</span><span class="p-tag">Feature
-                                Engineering</span><span class="p-tag">Healthcare</span><span class="p-tag">Data
-                                Analysis</span>
+                            <span class="p-tag">Python</span><span class="p-tag">FastAPI</span><span
+                                class="p-tag">Next.js</span><span class="p-tag">YOLOv8</span><span
+                                class="p-tag">OpenCV</span><span class="p-tag">DeepSort</span><span
+                                class="p-tag">PostgreSQL</span><span class="p-tag">pgvector</span><span
+                                class="p-tag">Redis</span><span class="p-tag">Celery</span>
                         </div>
                     </div>
                     <div class="p-arr">→</div>
@@ -1780,8 +2005,8 @@
     </div>
     </div>
 
-    <!-- ══════════ PAGE 4: ACHIEVEMENTS ══════════ -->
-    <div class="page" data-page="4">
+    <!-- ══════════ PAGE 5: ACHIEVEMENTS ══════════ -->
+    <div class="page" data-page="5">
     <section id="achievements">
         <div class="ach-inner">
             <span class="section-tag rev">/ Milestones</span>
@@ -1822,8 +2047,8 @@
     </section>
     </div>
 
-    <!-- ══════════ PAGE 5: CONTACT ══════════ -->
-    <div class="page" data-page="5">
+    <!-- ══════════ PAGE 6: CONTACT ══════════ -->
+    <div class="page" data-page="6">
     <section id="contact">
         <div class="contact-inner">
             <div class="rev">
@@ -1994,7 +2219,7 @@
         let isTransitioning = false;
 
         // Map section IDs to page indices
-        const sectionToPage = { hero: 0, skills: 1, about: 2, projects: 3, achievements: 4, contact: 5 };
+        const sectionToPage = { hero: 0, skills: 1, about: 2, experience: 3, projects: 4, achievements: 5, contact: 6 };
 
         // Build nav dots
         const navDotsContainer = document.getElementById('navDots');
@@ -2013,7 +2238,7 @@
         }
 
         function updateNavActive(idx) {
-            const pageMap = { 1: 'skills', 2: 'about', 3: 'projects', 4: 'achievements' };
+            const pageMap = { 1: 'skills', 2: 'about', 3: 'experience', 4: 'projects', 5: 'achievements' };
             document.querySelectorAll('.nav-link').forEach(a => {
                 a.classList.toggle('active', a.dataset.sec === pageMap[idx]);
             });
